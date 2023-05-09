@@ -1,9 +1,6 @@
-using System;
 
-class Program
+public class History  
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Develop02 World!");
-    }
-}
+    
+} 
+

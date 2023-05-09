@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning02 World!");
+        Jobs._jobTitle = "Software Engineer"; 
+
+        Jobs.Display();
+
+
     }
 }
