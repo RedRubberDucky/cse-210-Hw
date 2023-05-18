@@ -1,0 +1,5 @@
+C:\Users\Isaac\Desktop\BYU-I Spring2023\Programming with classes\cse-210-Hw\obj\Debug\net7.0\cse-210-Hw.csproj.AssemblyReference.cache
+C:\Users\Isaac\Desktop\BYU-I Spring2023\Programming with classes\cse-210-Hw\obj\Debug\net7.0\cse-210-Hw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaac\Desktop\BYU-I Spring2023\Programming with classes\cse-210-Hw\obj\Debug\net7.0\cse-210-Hw.AssemblyInfoInputs.cache
+C:\Users\Isaac\Desktop\BYU-I Spring2023\Programming with classes\cse-210-Hw\obj\Debug\net7.0\cse-210-Hw.AssemblyInfo.cs
+C:\Users\Isaac\Desktop\BYU-I Spring2023\Programming with classes\cse-210-Hw\obj\Debug\net7.0\cse-210-Hw.csproj.CoreCompileInputs.cache
