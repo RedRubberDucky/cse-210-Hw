@@ -12,11 +12,11 @@ public class Player
     }
 
     // Constructor
-    public Player(string name, int jersey, string postion)
+    public Player(string name, int jersey, string position)
     {
         _name = name;
         _jersey = jersey;
-        _position = _position;
+        _position = position;
     }
 
     //Constructor

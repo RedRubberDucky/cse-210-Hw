@@ -1,3 +1,5 @@
+
+
 Source source = new Source("None Were with Him","http://www.churchofjesuschrist.org");
 Console.WriteLine(source.Stringify());
 
@@ -14,7 +16,7 @@ _board.AddQuote(
     )
 );
 
-//Two different whys to write quotes in the code
+//Two different ways to write quotes in the code
 _board.AddQuote(
     new Quote(
         "Sister Elain S. Dalton",

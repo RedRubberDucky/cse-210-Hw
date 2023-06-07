@@ -6,7 +6,7 @@ class Program
     {
         Jobs._jobTitle = "Software Engineer"; 
 
-        Jobs.Display();
+        Jobs.display();
 
 
     }
