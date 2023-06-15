@@ -6,20 +6,27 @@ public class Jobs
 
     private string _jobTitle;
 
-    private int _start;
+    private string _startMonth;
+    private int _startYear;
+    private string _endMonth;
 
-    private int _end;
+    private int _endYear;
 
     //Behaviors
-    public Jobs (string company, string jobtitle)
+    public Jobs (string company, string jobtitle, string startMonth, int startYear, string endMonth, int endYear)
     {
         _company = company;
         _jobTitle = jobtitle;
+        _startMonth = startMonth;
+        _startYear = startYear;
+        _endMonth = endMonth;
+        _endYear = endYear;
+
     }
 
     public void display()
     {
-        Console.WriteLine($"{_jobTitle}, {_company}, {_start}, {_end}");
+        Console.WriteLine($"Employer:{_company}, Title:{_jobTitle}, Start Month:{_startMonth}, Start Year:{_startYear}, End Month:{_endMonth} End Year:{_endYear}");
     }
 
 }

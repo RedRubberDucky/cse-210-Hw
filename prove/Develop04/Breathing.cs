@@ -1,4 +1,11 @@
-public class Breathing
+public class Breathing : Parent
 {
-    public 
+    public string _breathing;
+    
+    public Breathing (string breathing)
+    {
+        _breathing = breathing; 
+    }
+    
+   
 }

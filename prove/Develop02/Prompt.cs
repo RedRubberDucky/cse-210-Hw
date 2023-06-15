@@ -1,4 +1,14 @@
-public class prompts
+public class Prompts
 {
-    // list the strings
+    public string _prompt;
+
+    public Prompts (string prompt)
+    {
+        _prompt = prompt;
+    }
+
+    public string displaypieces()
+    {
+        return $"Prompt:{_prompt}";
+    }
 }
