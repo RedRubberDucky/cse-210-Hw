@@ -1,19 +1,21 @@
 public class Entry
 {
-    private int _date;
-    private int _time; 
+
+    string _date;
+
+    
     private string _location; 
-
-    public Entry (int date, int time, string location)
+    private string _message;
+    public Entry (string location, string message)
     {
-        _date = date;
-        _time = time;
+        DateTime date = DateTime.Now;
+        _date = date.ToShortDateString();
         _location = location;
-
+        _message = message;
     }
-    public string display()
+    public string getentry()
     {
-        return $"Date:{_date}, Time:{_time}, Location:{_location}";
+        return $"Date:{_date}, Location:{_location}, Message:{_message}";
     }
     
 }
