@@ -2,12 +2,12 @@
 
 public class Words
 {
-    private string _words;
+    private string _word;
     private bool _hidden = false;
 
     public Words(string text)
     {
-        _words = text;
+        _word = text;
     }
 
     public void hide() 
@@ -33,40 +33,16 @@ public class Words
     // get text
     public string get_text()
     {
-        if (_hidden == true)
+        if (_hidden != false)
         {
-            return ("____");
+            _word = "----";
         }
-        else 
-        {
-            return _words;
-        }
+        return _word;
+    }
+     
+    public bool GetHidden()
+    {
+        return _hidden;
     }
 
-
-
-
-
-
-//     public Words (string words)
-//     {
-//         _words = words;
-//     }
-    
-//     public void set_words(string _verse)
-//     {
-//         _words = _verse;
-//     }
-
-//     public string get_words()
-//     {
-//         return _words;
-//     }
-
-//     public void set_hidden_words(bool hidden)
-//     {
-//         _hidden = hidden; 
-//     }
-    
-    
 }
