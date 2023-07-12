@@ -3,41 +3,81 @@ public class Order
 {
     //list of products and customers
     //return the packing label and shipping label
-    //packing label, (Name, Product id, product order)
+    //packing label, (Name of product, Product id, product order)
     //shipping label, (Name, address, customer)
     // return the total price
     // USA 5$, Outside USA 35$
     
-    public string _name;
-    public string _address;
-    public int _productID;
-    public string _customer;
-    public int _ordernumber; 
-    public string _contents;
+    // list of products
+    
+    public List <Product> _cart  = new List<Product>();
+    Customer _customer; 
+    private double _orderTotal;
+    private Product _packingLabel;
+    private string _shippingLabel;    
 
-    public Order(string name, string address, int product_ID, string customer, int order_number, string contents)
+    public Order(Customer customer)
     {
-        _name = name;
-        _address = address;
-        _productID = product_ID;
         _customer = customer;
-        _ordernumber = order_number;
-        _contents = contents;
     }
 
-    // packing label, (Name, Product id, product order)
-    
-    public string packinglabel()
+    public Order (Customer customer, List<Product> products)
     {
-        return($"Name:{_name}, Product ID:{_productID} Contents:{_contents}");
+        _customer = customer;
+        _cart = new List<Product>();
+        _cart = products; 
+    }
+
+
+
+    
+    
+    public void AddtoCart(Product product)
+    {
+        _cart.Add(product);
+    }
+
+// packing label, (Name, Product id, product order)    
+    public void packinglabel()
+    {
+        //return($"Product ID:{_packingLabel.ProductInformation()}");
+        Console.WriteLine(_packingLabel.ProductInformation());
     }
     
-    //shipping label, (Name, address, customer)
-    public string shippinglabel()
+    //shipping label, (Name, address)
+    public void shippinglabel()
     {
-        return($"Name: {_name}, Address:{_address}, Customer: {_customer}"); // call address information from address class
+        //return($"Name: {_customer.CustomerName()}, Address:{_customer.getaddress().printaddress()}"); // call address information from address class
+        Console.WriteLine($"{_customer.CustomerName()}Address:{_customer.getaddress().printaddress()}");
     }
-    
+
+    public void printLabels()
+    {
+        Console.WriteLine("--------------------------");
+        //packinglabel();
+        shippinglabel();
+        foreach (Product p in _cart)
+        {
+            Console.WriteLine($"{p.ProductInformation()}");
+        }
+        Console.WriteLine($"\nOrder Total: ${GetTotal()}\n");
+        //GetTotal();
+        Console.WriteLine($"Shipping Cost: ${_customer.costShipping()}\n");
+        Console.WriteLine($"Balance Due: ${_customer.costShipping() + GetTotal()}\n");
+        Console.WriteLine("--------------------------");
+    }
+
+    public double GetTotal()
+    {
+        double _total = 0;
+        foreach (Product p in _cart)
+        {
+            _total += p.TotalCost();
+        }
+        return (_total);
+            
+    }
+
 
 
 }
