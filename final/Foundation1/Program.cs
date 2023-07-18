@@ -8,7 +8,7 @@
         
         Videos video2 = new Videos ($"As Many as I Love, I Rebuke and Chasten", "D. Todd Christofferson", 15);
         video2.addcomment("Mark", "We all need to be chastened in our lives.");
-        video2.addcomment("James", "Heugh Browns story is so inspirational.");
+        video2.addcomment("James", "Hugh Brown's story is so inspirating.");
         video2.addcomment("Tom", "I have often felt like the berry bush in all stages it was in.");
 
         Videos video3 = new Videos ($"Peacemakers Needed", "Russel M. Nelson", 20);
